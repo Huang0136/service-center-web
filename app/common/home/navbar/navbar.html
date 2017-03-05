@@ -1,0 +1,22 @@
+<li *ngFor="let resource of resources" class="">
+  <!--菜单链接-->
+  <a *ngIf="resource.childResources == null || resource.childResources.length ==0" routerLink="{{resource.href}}">
+    <i class="fa {{resource.linkIcon}} fa-fw"></i>
+    <span>{{resource.name}}</span>
+  </a>
+
+  <!--菜单树-->
+  <a *ngIf="resource.childResources != null && resource.childResources.length > 0" style="color:#0275d8" (click)="clickParentMenuLink(resource.id)">
+    <i class="fa {{resource.linkIcon}} fa-fw"></i>
+    <span>{{resource.name}}</span>
+    <i class="fa fw fa-plus-square-o" id="navbar_children_i_{{resource.id}}"></i>
+  </a>
+
+  <!--caret-down fa-caret-left fa-plus-circle -->
+  <ul *ngIf="resource.childResources != null && resource.childResources.length > 0" style="display:none;" class="" id="navbar_children_ul_{{resource.id}}">
+    <navbar [resources]="resource.childResources"></navbar>
+  </ul>
+</li>
+
+
+

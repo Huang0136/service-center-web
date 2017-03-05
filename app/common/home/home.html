@@ -1,0 +1,68 @@
+<div class="">
+  <!--顶部-->
+  <nav class="navbar navbar-light bg-info row">
+    <div class="collapse navbar-toggleable-md">
+      <label class="navbar-brand alert-heading"><b>分布式微服务管理系统</b></label>
+      <div class="nav navbar-nav float-sm-right">
+        <div class="form-inline nav-item">
+          <input class="form-control" type="text" placeholder="search" #searchContent>
+          <input class="btn btn-outline-success" type="button" value="搜索" (click)="search(searchContent.value)">
+        </div>
+        <div class="nav-item ">
+          <img class="rounded-circle" style="width:40px;height:50px" src="/favicon.ico" alt="头像加载失败">
+          <a href="#"><label>{{config.currentUser.username}}</label></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!--内容区域-->
+  <div class="row">
+    <!--菜单栏-->
+    <div class="col-sm-2 bg-faded">
+      <nav class="navbar">
+        <ul class="nav">
+          <navbar [resources]="resources"></navbar>
+        </ul>
+      </nav>
+    </div>
+    <!--内容区域-->
+    <div class="col-sm-10">
+      <!--导航栏-->
+      <div class="row">
+        <ol class="nav breadcrumb">
+          <li class="breadcrumb-item"><a href="#">home</a></li>
+          <li class="breadcrumb-item"><a href="#">user</a></li>
+          <li class="breadcrumb-item active"><a href="#">huang</a></li>
+        </ol>
+      </div>
+
+      <!--标签页
+      <div class="row bg-silver">
+        标签页
+      </div>-->
+
+      <!--内容 -->
+      <div class="row">
+        <router-outlet></router-outlet>
+      </div>
+
+      <!--页脚-->
+      <footer class="row text-muted card-footer">
+        <div class="container ">
+          <ul class="row">
+            <li class="col-sm-4"><a href="#">aa</a></li>
+            <li class="col-sm-4"><a href="#">bb</a></li>
+            <li class="col-sm-4"><a href="aa">cc</a></li>
+          </ul>
+          <p>
+            Designed and built with all the love in the world by @huanggh.Maintained by the core team with the help of our contributors
+          </p>
+          <p>
+            Currently v0.01. Code licensed MIT,@2016-2017版权所有 翻版不究<a href="#">huanggh's blog</a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
