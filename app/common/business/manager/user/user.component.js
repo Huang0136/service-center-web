@@ -37,9 +37,9 @@ var UserComponent = (function (_super) {
         });
         this.users = null;
         var rs = new Array();
-        rs.push(new user_1.User1("huanggh", 22));
-        rs.push(new user_1.User1("huangfm", 22));
-        rs.push(new user_1.User1("Sunwx", 13));
+        rs.push(new user_1.User1("huanggh1", 22));
+        rs.push(new user_1.User1("huanggh2", 22));
+        rs.push(new user_1.User1("huanggh3", 13));
         var userPaging = new paging_1.Paging(20, 3, 500, rs);
         this.userPaging = userPaging;
         console.log(this.userPaging);

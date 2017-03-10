@@ -35,9 +35,9 @@ export class UserComponent extends OnInit {
     this.users = null;
 
     var rs: Array<any> = new Array<any>();
-    rs.push(new User1("huanggh",22));
-    rs.push(new User1("huangfm",22));
-    rs.push(new User1("Sunwx",13));
+    rs.push(new User1("huanggh1",22));
+    rs.push(new User1("huanggh2",22));
+    rs.push(new User1("huanggh3",13));
 
     var userPaging: Paging = new Paging(20,3,500,rs) ;
 
